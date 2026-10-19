@@ -52,7 +52,7 @@ No compiler, SDK or other toolchain needs to be installed.
 
 ## Installation
 
-Each release on the [releases page](https://github.com/itamarBadash/C_compiler/releases) has
+Each release on the [releases page](https://github.com/itamarBadash/MMC99/releases) has
 three files:
 
 | File | Contents |
@@ -251,8 +251,8 @@ The build runs on Windows and produces the compiler, its tests and both download
 **Steps**
 
 ```sh
-git clone https://github.com/itamarBadash/C_compiler.git
-cd C_compiler
+git clone https://github.com/itamarBadash/MMC99.git
+cd MMC99
 cmake -S . -B cmake-build-debug -G Ninja
 cmake --build cmake-build-debug
 ```
