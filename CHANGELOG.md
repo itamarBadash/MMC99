@@ -31,4 +31,4 @@ The first release: a complete, hosted C99 compiler for Windows x64 and Linux x64
   3.54 workload on both targets, one program reaching every translation limit, and a case for
   every constraint in C99 clause 6.
 
-[1.0.0]: https://github.com/itamarBadash/C_compiler/releases/tag/v1.0.0
+[1.0.0]: https://github.com/itamarBadash/MMC99/releases/tag/v1.0.0
