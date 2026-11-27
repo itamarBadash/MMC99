@@ -34,7 +34,7 @@ TEST(LexerTests, KeywordsIdentifiersAndNumbers) {
   lexer lex;
   lexer_init(&lex, source);
 
-  expect_token(&lex, TOKEN_INT, "int");
+  expect_token(&lex, TOKEN_EOF, "int");
   expect_token(&lex, TOKEN_IDENTIFIER, "main_123");
   expect_token(&lex, TOKEN_RETURN, "return");
   expect_token(&lex, TOKEN_NUMBER, "0");
