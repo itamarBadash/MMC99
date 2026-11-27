@@ -1,6 +1,6 @@
+#include "compat.h"
 #include "target_guard.h"
 #include <cstring>
-#include <direct.h>
 #include <fstream>
 #include <gtest/gtest.h>
 #include <iostream>

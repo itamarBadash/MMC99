@@ -1,11 +1,10 @@
+#include "compat.h"
 #include "target_guard.h"
 #include <algorithm>
 #include <cstdio>
 #include <cstring>
-#include <direct.h>
 #include <fstream>
 #include <gtest/gtest.h>
-#include <io.h>
 #include <map>
 #include <sstream>
 #include <string>
