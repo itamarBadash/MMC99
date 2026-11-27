@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v7
+
+      - name: Build the CI image
+        run: docker build -t mmc99-ci -f ci/Dockerfile ci
+
+      - name: Configure
+        run: docker run --rm -u "$(id -u):$(id -g)" -v "$PWD":/src mmc99-ci cmake -S . -B build-linux -G Ninja
+
+      - name: Build
+        run: docker run --rm -u "$(id -u):$(id -g)" -v "$PWD":/src mmc99-ci cmake --build build-linux
+
+      - name: Test
+        run: docker run --rm -u "$(id -u):$(id -g)" -v "$PWD":/src mmc99-ci ctest --test-dir build-linux --output-on-failure
+
+      - name: Upload the compiler
+        uses: actions/upload-artifact@v7
+        with:
+          name: MMC99-linux-x86_64
+          path: build-linux/MMC99
