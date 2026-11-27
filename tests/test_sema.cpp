@@ -1,10 +1,10 @@
+#include "compat.h"
 #include "conversion_walk.h"
 #include "target_guard.h"
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
-#include <direct.h>
 #include <fstream>
 #include <gtest/gtest.h>
 #include <string>
